@@ -18,6 +18,7 @@ I'm a Full Stack Software Engineer with **9 years of experience** building scala
 - **Portfolio:** [dannyharris.github.io](https://dannydev101.github.io)
 - **GitHub:** [github.com/dannyharris](https://github.com/dannydev101)
 - **Email:** harrisdanny30@gmail.com
+- **LinkedIn:** [linkedin.com/dannyharris](https://www.linkedin.com/in/danny-harris-222578374)
 
 ## 📫 Let's Connect!
 I'm always open to exciting projects, collaboration, or just a good tech chat. Feel free to reach out!
