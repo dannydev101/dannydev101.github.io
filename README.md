@@ -15,7 +15,7 @@ I'm a Full Stack Software Engineer with **9 years of experience** building scala
 - Led architecture and deployment for cross-platform apps.
 
 ## 🔗 Links
-- **Portfolio:** [dannyharris.github.io](https://dannydev101.github.io)
+- **Website:** [dannyharris.github.io](https://dannydev101.github.io)
 - **GitHub:** [github.com/dannyharris](https://github.com/dannydev101)
 - **Email:** harrisdanny30@gmail.com
 - **LinkedIn:** https://www.linkedin.com/in/danny-harris-222578374/
