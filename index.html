@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,19 +24,80 @@
         .skill-card {
             background: linear-gradient(145deg, #ffffff, #e6e6e6);
         }
+        /* Dark mode styles */
+        .dark .skill-card {
+            background: linear-gradient(145deg, #2d3748, #1a202c);
+        }
+        .dark {
+            background-color: #1a202c;
+            color: #e2e8f0;
+        }
+        .dark .bg-white {
+            background-color: #2d3748;
+        }
+        .dark .bg-gray-100 {
+            background-color: #1a202c;
+        }
+        .dark .text-gray-600 {
+            color: #a0aec0;
+        }
+        .dark .text-gray-900 {
+            color: #e2e8f0;
+        }
+        .dark .bg-gray-50 {
+            background-color: #4a5568;
+        }
+        .dark .bg-gray-800 {
+            background-color: #2d3748;
+        }
+        .dark .bg-gray-950 {
+            background: linear-gradient(145deg, #1a202c, #2d3748);
+        }
+        .dark .text-gray-400 {
+            color: #a0aec0;
+        }
+        /* Footer link hover effect */
+        .footer-link {
+            transition: transform 0.2s ease, color 0.2s ease;
+        }
+        .footer-link:hover {
+            transform: scale(1.1);
+        }
+        /* Gradient divider */
+        .footer-divider {
+            background: linear-gradient(to right, transparent, #2563eb, transparent);
+        }
     </style>
 </head>
-<body class="font-inter bg-gray-100 text-gray-900 antialiased">
+<body class="font-inter bg-gray-100 text-gray-900 antialiased transition-colors duration-300">
     <!-- Navbar -->
     <nav class="fixed top-0 left-0 w-full bg-white shadow-lg z-50">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-blue-700">Danny Harris</a>
-            <div class="space-x-6">
+            <a href="#home" class="text-2xl font-bold text-blue-700 flex items-center">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-2">
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#4f46e5;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="20" cy="20" r="18" fill="url(#logoGradient)" />
+                    <path d="M12 12V28H16V20H24V28H28V12H12ZM16 16H24V12H16V16Z" fill="white" />
+                    <text x="14" y="26" fill="white" font-family="Inter" font-size="12" font-weight="bold">DH</text>
+                </svg>
+                Danny Harris
+            </a>
+            <div class="flex items-center space-x-6">
                 <a href="#home" class="text-gray-600 hover:text-blue-700 transition">Home</a>
                 <a href="#about" class="text-gray-600 hover:text-blue-700 transition">About</a>
                 <a href="#skills" class="text-gray-600 hover:text-blue-700 transition">Skills</a>
                 <a href="#projects" class="text-gray-600 hover:text-blue-700 transition">Projects</a>
+                <a href="#testimonials" class="text-gray-600 hover:text-blue-700 transition">Testimonials</a>
+                <a href="#experience" class="text-gray-600 hover:text-blue-700 transition">Experience</a>
                 <a href="#contact" class="text-gray-600 hover:text-blue-700 transition">Contact</a>
+                <button id="theme-toggle" class="text-gray-600 hover:text-blue-700 transition" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
             </div>
         </div>
     </nav>
@@ -45,11 +106,12 @@
     <section id="home" class="bg-gradient-to-br from-blue-600 to-indigo-500 text-white py-32">
         <div class="container mx-auto px-4 text-center">
             <h1 class="text-5xl md:text-6xl font-bold mb-4 animate-fadeInUp">Danny Harris</h1>
-            <p class="text-2xl md:text-3xl mb-6 animate-fadeInUp" style="animation-delay: 0.2s;">Full Stack Software Engineer</p>
-            <p class="text-lg max-w-2xl mx-auto mb-8 animate-fadeInUp" style="animation-delay: 0.4s;">Crafting scalable, high-performance web applications with over 8 years of experience in modern technologies.</p>
-            <div class="flex justify-center gap-4 animate-fadeInUp" style="animation-delay: 0.6s;">
-                <a href="mailto:harrisdanny30@gmail.com" class="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-100 transition shadow-lg" aria-label="Email Danny Harris">Contact Me via Email</a>
-                <a href="https://www.linkedin.com/in/danny-harris-222578374/" class="border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition" aria-label="Danny Harris LinkedIn Profile">LinkedIn</a>
+            <p class="text-2xl md:text-3xl mb-4 animate-fadeInUp" style="animation-delay: 0.2s;">Full Stack Software Engineer</p>
+            <p class="text-xl max-w-2xl mx-auto mb-6 animate-fadeInUp" style="animation-delay: 0.4s;">Turning ideas into scalable solutions with code and creativity.</p>
+            <p class="text-lg max-w-2xl mx-auto mb-8 animate-fadeInUp" style="animation-delay: 0.6s;">I’m a developer with 7+ years of experience building apps that solve real problems, from task management tools to blockchain systems.</p>
+            <div class="flex justify-center gap-4 animate-fadeInUp" style="animation-delay: 0.8s;">
+                <a href="mailto:harrisdanny30@gmail.com" class="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-100 transition shadow-lg" aria-label="Email Danny Harris">Contact Me</a>
+                <a href="#projects" class="border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition" aria-label="View Danny Harris Projects">See My Work</a>
             </div>
         </div>
     </section>
@@ -59,8 +121,8 @@
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold text-center mb-12 animate-fadeInUp">About Me</h2>
             <div class="max-w-3xl mx-auto text-center">
-                <p class="text-lg mb-6 animate-fadeInUp" style="animation-delay: 0.2s;">I'm a dedicated full stack software engineer with 8 years of experience building innovative, scalable web applications. My expertise spans front-end and back-end development, with a focus on delivering seamless user experiences and robust, high-performance systems.</p>
-                <p class="text-lg animate-fadeInUp" style="animation-delay: 0.4s;">From real-time collaboration tools to decentralized applications on the blockchain, I thrive on solving complex challenges and driving projects from concept to deployment in Agile environments.</p>
+                <p class="text-lg mb-6 animate-fadeInUp" style="animation-delay: 0.2s;">Hey there! I’m Danny, a full stack software engineer who loves turning complex challenges into clean, scalable solutions. With over 7 years of experience, I’ve built everything from real-time collaboration apps to AI-powered tools and blockchain systems.</p>
+                <p class="text-lg animate-fadeInUp" style="animation-delay: 0.4s;">I thrive in fast-paced environments, working with teams to ship reliable code that makes a difference. Whether it’s crafting intuitive frontends or optimizing backend performance, I’m all about creating tech that users love.</p>
             </div>
         </div>
     </section>
@@ -79,71 +141,76 @@
                 <div class="skill-card p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 0.3s;">
                     <i class="fab fa-python text-4xl text-blue-400 mb-4"></i>
                     <h3 class="text-xl font-semibold text-blue-600">Python</h3>
-                    <p class="text-gray-600">Scripting, Data Analysis</p>
+                    <p class="text-gray-600">Backend, APIs</p>
                 </div>
                 <div class="skill-card p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 0.4s;">
                     <i class="fas fa-gem text-4xl text-red-600 mb-4"></i>
                     <h3 class="text-xl font-semibold text-blue-600">Ruby</h3>
-                    <p class="text-gray-600">Scripting, Web Development</p>
+                    <p class="text-gray-600">Web Development</p>
                 </div>
                 <!-- Frameworks -->
                 <div class="skill-card p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 0.5s;">
+                    <i class="fab fa-react text-4xl text-cyan-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-blue-600">React</h3>
+                    <p class="text-gray-600">Hooks, Redux, Next.js</p>
+                </div>
+                <div class="skill-card p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 0.6s;">
                     <i class="fab fa-node-js text-4xl text-green-500 mb-4"></i>
                     <h3 class="text-xl font-semibold text-blue-600">Node.js</h3>
                     <p class="text-gray-600">Express, REST APIs, GraphQL</p>
                 </div>
-                <div class="skill-card p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 0.6s;">
+                <div class="skill-card p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 0.7s;">
                     <i class="fab fa-python text-4xl text-blue-400 mb-4"></i>
                     <h3 class="text-xl font-semibold text-blue-600">Django</h3>
                     <p class="text-gray-600">MVC, ORM, Authentication</p>
                 </div>
-                <div class="skill-card p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 0.7s;">
+                <div class="skill-card p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 0.8s;">
                     <i class="fab fa-python text-4xl text-blue-400 mb-4"></i>
                     <h3 class="text-xl font-semibold text-blue-600">FastAPI</h3>
                     <p class="text-gray-600">Async APIs, Validation</p>
                 </div>
-                <div class="skill-card p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 0.8s;">
+                <div class="skill-card p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 0.9s;">
                     <i class="fab fa-python text-4xl text-blue-400 mb-4"></i>
                     <h3 class="text-xl font-semibold text-blue-600">Flask</h3>
                     <p class="text-gray-600">Lightweight, Microservices</p>
                 </div>
-                <div class="skill-card p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 0.9s;">
+                <div class="skill-card p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 1.0s;">
                     <i class="fas fa-gem text-4xl text-red-600 mb-4"></i>
                     <h3 class="text-xl font-semibold text-blue-600">Ruby on Rails</h3>
                     <p class="text-gray-600">MVC, REST APIs, Active Record</p>
                 </div>
                 <!-- Databases -->
-                <div class="skill-card p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 1.0s;">
+                <div class="skill-card p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 1.1s;">
                     <i class="fas fa-database text-4xl text-gray-600 mb-4"></i>
                     <h3 class="text-xl font-semibold text-blue-600">Databases</h3>
                     <p class="text-gray-600">MongoDB, PostgreSQL, MySQL</p>
                 </div>
                 <!-- Blockchain -->
-                <div class="skill-card p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 1.1s;">
+                <div class="skill-card p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 1.2s;">
                     <i class="fab fa-ethereum text-4xl text-purple-500 mb-4"></i>
                     <h3 class="text-xl font-semibold text-blue-600">Blockchain</h3>
                     <p class="text-gray-600">Ethereum, Solidity, Web3.js</p>
                 </div>
                 <!-- Cloud & DevOps -->
-                <div class="skill-card p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 1.2s;">
+                <div class="skill-card p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 1.3s;">
                     <i class="fab fa-aws text-4xl text-orange-500 mb-4"></i>
                     <h3 class="text-xl font-semibold text-blue-600">Cloud & DevOps</h3>
                     <p class="text-gray-600">AWS, Docker, Kubernetes, CI/CD</p>
                 </div>
                 <!-- Tailwind CSS -->
-                <div class="skill-card p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 1.3s;">
+                <div class="skill-card p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 1.4s;">
                     <i class="fas fa-wind text-4xl text-teal-500 mb-4"></i>
                     <h3 class="text-xl font-semibold text-blue-600">Tailwind CSS</h3>
                     <p class="text-gray-600">Responsive Design, Utility-First</p>
                 </div>
                 <!-- Testing -->
-                <div class="skill-card p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 1.4s;">
+                <div class="skill-card p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 1.5s;">
                     <i class="fas fa-vial text-4xl text-pink-500 mb-4"></i>
                     <h3 class="text-xl font-semibold text-blue-600">Testing</h3>
                     <p class="text-gray-600">Jest, Cypress, Mocha</p>
                 </div>
                 <!-- AI Integration -->
-                <div class="skill-card p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 1.5s;">
+                <div class="skill-card p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 1.6s;">
                     <i class="fas fa-brain text-4xl text-red-400 mb-4"></i>
                     <h3 class="text-xl font-semibold text-blue-600">AI Integration</h3>
                     <p class="text-gray-600">OpenAI, LLMs, LangChain</p>
@@ -156,6 +223,7 @@
     <section id="projects" class="py-24 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold text-center mb-12 animate-fadeInUp">Projects</h2>
+            <p class="text-lg text-center max-w-3xl mx-auto mb-8 animate-fadeInUp" style="animation-delay: 0.2s;">Here’s a look at some of the projects I’ve poured my heart into, solving real-world problems with clean, scalable code.</p>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- TaskPilot -->
                 <div class="bg-gray-50 p-8 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp">
@@ -170,12 +238,64 @@
                 <!-- Decentralized Voting dApp -->
                 <div class="bg-gray-50 p-8 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 0.4s;">
                     <h3 class="text-2xl font-semibold mb-4">Decentralized Voting dApp</h3>
-                    <p class="text-gray-600">A tamper-proof voting application on the Ethereum blockchain for transparent elections.</p>
+                    <p class="text-gray-600">A tamper-proof voting application on the blockchain for transparent elections.</p>
                 </div>
                 <!-- MedNote AI -->
                 <div class="bg-gray-50 p-8 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 0.6s;">
                     <h3 class="text-2xl font-semibold mb-4">MedNote AI</h3>
                     <p class="text-gray-600">A web-based tool that helps doctors and clinic staff generate structured patient summaries from free-text medical notes using AI.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-24 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 animate-fadeInUp">What People Say</h2>
+            <p class="text-lg text-center max-w-3xl mx-auto mb-8 animate-fadeInUp" style="animation-delay: 0.2s;">I’ve had the privilege of working with some amazing teams. Here’s what a few folks had to say.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-md animate-fadeInUp" style="animation-delay: 0.4s;">
+                    <p class="text-gray-600 mb-4">“Danny’s ability to tackle complex backend challenges while keeping the user experience smooth is unmatched. He’s a true full-stack rockstar.”</p>
+                    <p class="text-sm font-semibold text-blue-600">– Lead Developer, Tech Startup</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-md animate-fadeInUp" style="animation-delay: 0.6s;">
+                    <p class="text-gray-600 mb-4">“Working with Danny on our blockchain project was a game-changer. His attention to detail and passion for clean code made all the difference.”</p>
+                    <p class="text-sm font-semibold text-blue-600">– Project Manager, Innovative Tech Project</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-md animate-fadeInUp" style="animation-delay: 0.8s;">
+                    <p class="text-gray-600 mb-4">“Danny’s leadership in deploying our cloud platform saved us time and budget. He’s a problem-solver you want on your team.”</p>
+                    <p class="text-sm font-semibold text-blue-600">– CTO, Software Firm</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section id="experience" class="py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 animate-fadeInUp">Work Experience</h2>
+            <p class="text-lg text-center max-w-3xl mx-auto mb-8 animate-fadeInUp" style="animation-delay: 0.2s;">Over 7 years, I’ve built my career solving tough problems and delivering impactful projects across diverse teams. Here are a few highlights.</p>
+            <div class="space-y-8 max-w-3xl mx-auto">
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-md animate-fadeInUp" style="animation-delay: 0.4s;">
+                    <h3 class="text-2xl font-semibold text-blue-600">Lead Full Stack Developer</h3>
+                    <p class="text-gray-600 mb-2">DigiCert | 03/2022 – Present</p>
+                    <p class="text-gray-600">Led development of scalable applications, mentoring a team to deliver user-focused solutions with improved performance and reliability.</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-md animate-fadeInUp" style="animation-delay: 0.6s;">
+                    <h3 class="text-2xl font-semibold text-blue-600">Software Developer</h3>
+                    <p class="text-gray-600 mb-2">Miles IT | 02/2021 – 02/2022</p>
+                    <p class="text-gray-600">Built and maintained web applications, focusing on seamless functionality and optimizing user experiences across platforms.</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-md animate-fadeInUp" style="animation-delay: 0.8s;">
+                    <h3 class="text-2xl font-semibold text-blue-600">Full Stack Developer</h3>
+                    <p class="text-gray-600 mb-2">Precise Solutions | 07/2018 – 01/2021</p>
+                    <p class="text-gray-600">Developed full-stack solutions, streamlining workflows and enhancing application scalability for diverse client needs.</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-md animate-fadeInUp" style="animation-delay: 1.0s;">
+                    <h3 class="text-2xl font-semibold text-blue-600">Junior Software Engineer</h3>
+                    <p class="text-gray-600 mb-2">Agile Cloud Consulting | 07/2016 – 06/2018</p>
+                    <p class="text-gray-600">Contributed to building cloud-based applications, learning best practices and delivering reliable code under tight deadlines.</p>
                 </div>
             </div>
         </div>
@@ -194,20 +314,56 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
+    <footer class="bg-gray-950 text-white py-12">
         <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-6 md:mb-0">
-                    <h3 class="text-xl font-bold">Danny Harris</h3>
-                    <p class="text-gray-400">Full Stack Software Engineer</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Branding -->
+                <div class="flex flex-col items-center md:items-start">
+                    <a href="#home" class="flex items-center mb-4">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-2">
+                            <defs>
+                                <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#4f46e5;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <circle cx="20" cy="20" r="18" fill="url(#logoGradient)" />
+                            <path d="M12 12V28H16V20H24V28H28V12H12ZM16 16H24V12H16V16Z" fill="white" />
+                            <text x="14" y="26" fill="white" font-family="Inter" font-size="12" font-weight="bold">DH</text>
+                        </svg>
+                        <h3 class="text-xl font-bold text-blue-400">Danny Harris</h3>
+                    </a>
+                    <p class="text-gray-400 text-center md:text-left">Full Stack Software Engineer</p>
                 </div>
-                <div class="flex gap-6">
-                    <a href="mailto:harrisdanny30@gmail.com" class="text-gray-400 hover:text-blue-400 transition" aria-label="Email Danny Harris">Email</a>
-                    <a href="https://www.linkedin.com/in/danny-harris-222578374/" class="text-gray-400 hover:text-blue-400 transition" aria-label="Danny Harris LinkedIn Profile">LinkedIn</a>
+                <!-- Navigation -->
+                <div class="flex flex-col items-center">
+                    <h4 class="text-lg font-semibold text-blue-400 mb-4">Explore</h4>
+                    <div class="flex flex-col gap-2 text-center">
+                        <a href="#home" class="text-gray-400 hover:text-blue-400 footer-link">Home</a>
+                        <a href="#about" class="text-gray-400 hover:text-blue-400 footer-link">About</a>
+                        <a href="#skills" class="text-gray-400 hover:text-blue-400 footer-link">Skills</a>
+                        <a href="#projects" class="text-gray-400 hover:text-blue-400 footer-link">Projects</a>
+                        <a href="#experience" class="text-gray-400 hover:text-blue-400 footer-link">Experience</a>
+                        <a href="#contact" class="text-gray-400 hover:text-blue-400 footer-link">Contact</a>
+                    </div>
+                </div>
+                <!-- Social Links -->
+                <div class="flex flex-col items-center md:items-end">
+                    <h4 class="text-lg font-semibold text-blue-400 mb-4">Connect</h4>
+                    <div class="flex flex-col gap-2 text-center md:text-right">
+                        <a href="mailto:harrisdanny30@gmail.com" class="text-gray-400 hover:text-blue-400 footer-link" aria-label="Email Danny Harris">Email</a>
+                        <a href="https://www.linkedin.com/in/danny-harris-222578374/" class="text-gray-400 hover:text-blue-400 footer-link" aria-label="Danny Harris LinkedIn Profile">LinkedIn</a>
+                        <a href="https://github.com/dannydev101" class="text-gray-400 hover:text-blue-400 footer-link" aria-label="Danny Harris GitHub Profile">GitHub</a>
+                    </div>
                 </div>
             </div>
-            <hr class="my-6 border-gray-700">
-            <p class="text-center text-gray-400">&copy; 2025 Danny Harris. All rights reserved.</p>
+            <hr class="my-8 footer-divider h-[2px]">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-center md:text-left">Built with ☕ by Danny Harris</p>
+                <a href="#home" class="text-gray-400 hover:text-blue-400 footer-link mt-4 md:mt-0" aria-label="Back to top">
+                    <i class="fas fa-arrow-up mr-2"></i>Back to Top
+                </a>
+            </div>
         </div>
     </footer>
 
@@ -232,6 +388,14 @@
         }, { threshold: 0.1 });
 
         document.querySelectorAll('.animate-fadeInUp').forEach(el => observer.observe(el));
+
+        // Dark mode toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        themeToggle.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+            themeToggle.querySelector('i').classList.toggle('fa-moon');
+            themeToggle.querySelector('i').classList.toggle('fa-sun');
+        });
     </script>
 </body>
 </html>
