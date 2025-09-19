@@ -5,84 +5,158 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Danny Harris - Full Stack Software Engineer</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadeInUp {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
-<body class="font-inter bg-gray-50 text-gray-800">
-    <!-- Hero Section -->
-    <header class="bg-gradient-to-r from-blue-700 to-indigo-600 text-white py-24">
-        <div class="container mx-auto px-4 text-center">
-            <h1 class="text-5xl md:text-6xl font-bold mb-4">Danny Harris</h1>
-            <p class="text-2xl md:text-3xl mb-6">Full Stack Software Engineer</p>
-            <p class="text-lg max-w-2xl mx-auto mb-8">Crafting scalable, high-performance web applications with over 7 years of experience in modern technologies.</p>
-            <div class="flex justify-center gap-4">
-                <a href="mailto:harrisdanny30@gmail.com" class="bg-white text-blue-700 px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-100 transition shadow-lg">Contact Me via Email</a>
-                <a href="https://www.linkedin.com/in/danny-harris-222578374/" class="border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-700 transition">LinkedIn</a>
+<body class="font-inter bg-gray-100 text-gray-900 antialiased">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 w-full bg-white shadow-lg z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-blue-700">Danny Harris</a>
+            <div class="space-x-6">
+                <a href="#home" class="text-gray-600 hover:text-blue-700 transition">Home</a>
+                <a href="#about" class="text-gray-600 hover:text-blue-700 transition">About</a>
+                <a href="#skills" class="text-gray-600 hover:text-blue-700 transition">Skills</a>
+                <a href="#projects" class="text-gray-600 hover:text-blue-700 transition">Projects</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-700 transition">Contact</a>
             </div>
         </div>
-    </header>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-gradient-to-br from-blue-600 to-indigo-500 text-white py-32">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-4 animate-fadeInUp">Danny Harris</h1>
+            <p class="text-2xl md:text-3xl mb-6 animate-fadeInUp" style="animation-delay: 0.2s;">Full Stack Software Engineer</p>
+            <p class="text-lg max-w-2xl mx-auto mb-8 animate-fadeInUp" style="animation-delay: 0.4s;">Crafting scalable, high-performance web applications with over 7 years of experience in modern technologies.</p>
+            <div class="flex justify-center gap-4 animate-fadeInUp" style="animation-delay: 0.6s;">
+                <a href="mailto:harrisdanny30@gmail.com" class="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-100 transition shadow-lg" aria-label="Email Danny Harris">Contact Me via Email</a>
+                <a href="https://www.linkedin.com/in/danny-harris-222578374/" class="border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition" aria-label="Danny Harris LinkedIn Profile">LinkedIn</a>
+            </div>
+        </div>
+    </section>
 
     <!-- About Section -->
-    <section class="py-20">
+    <section id="about" class="py-24 bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-10">About Me</h2>
+            <h2 class="text-4xl font-bold text-center mb-12 animate-fadeInUp">About Me</h2>
             <div class="max-w-3xl mx-auto text-center">
-                <p class="text-lg mb-6">I'm a dedicated full stack software engineer with over 7 years of experience building innovative, scalable web applications. My expertise spans front-end and back-end development, with a focus on delivering seamless user experiences and robust, high-performance systems.</p>
-                <p class="text-lg">From real-time collaboration tools to decentralized applications on the blockchain, I thrive on solving complex challenges and driving projects from concept to deployment in Agile environments.</p>
+                <p class="text-lg mb-6 animate-fadeInUp" style="animation-delay: 0.2s;">I'm a dedicated full stack software engineer with over 7 years of experience building innovative, scalable web applications. My expertise spans front-end and back-end development, with a focus on delivering seamless user experiences and robust, high-performance systems.</p>
+                <p class="text-lg animate-fadeInUp" style="animation-delay: 0.4s;">From real-time collaboration tools to decentralized applications on the blockchain, I thrive on solving complex challenges and driving projects from concept to deployment in Agile environments.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 animate-fadeInUp">Skills</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
+                <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 0.2s;">
+                    <h3 class="text-xl font-semibold text-blue-600">JavaScript</h3>
+                    <p class="text-gray-600">ES6+, TypeScript, Node.js</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 0.3s;">
+                    <h3 class="text-xl font-semibold text-blue-600">React</h3>
+                    <p class="text-gray-600">Hooks, Redux, Next.js</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 0.4s;">
+                    <h3 class="text-xl font-semibold text-blue-600">Node.js</h3>
+                    <p class="text-gray-600">Express, REST APIs</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 0.5s;">
+                    <h3 class="text-xl font-semibold text-blue-600">Blockchain</h3>
+                    <p class="text-gray-600">Ethereum, Solidity</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 0.6s;">
+                    <h3 class="text-xl font-semibold text-blue-600">Python</h3>
+                    <p class="text-gray-600">Django, Flask</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 0.7s;">
+                    <h3 class="text-xl font-semibold text-blue-600">Databases</h3>
+                    <p class="text-gray-600">MongoDB, PostgreSQL</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 0.8s;">
+                    <h3 class="text-xl font-semibold text-blue-600">Cloud</h3>
+                    <p class="text-gray-600">AWS, Docker</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 0.9s;">
+                    <h3 class="text-xl font-semibold text-blue-600">DevOps</h3>
+                    <p class="text-gray-600">CI/CD, Git</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section class="bg-white py-20">
+    <section id="projects" class="py-24 bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-12">Projects</h2>
+            <h2 class="text-4xl font-bold text-center mb-12 animate-fadeInUp">Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- TaskPilot -->
-                <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition">
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp">
                     <h3 class="text-2xl font-semibold mb-4">TaskPilot</h3>
-                    <p class="text-gray-600 mb-4">A real-time task and project management web app for remote teams to assign tasks, set deadlines, and track progress collaboratively.</p>
-                    
+                    <p class="text-gray-600">A real-time task and project management web app for remote teams to assign tasks, set deadlines, and track progress collaboratively.</p>
                 </div>
                 <!-- Uptime Health -->
-                <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition">
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 0.2s;">
                     <h3 class="text-2xl font-semibold mb-4">Uptime Health</h3>
-                    <p class="text-gray-600 mb-4">A cloud-based platform for managing medical and dental equipment, enhancing compliance and reducing downtime for healthcare providers.</p>
-                    
+                    <p class="text-gray-600">A cloud-based platform for managing medical and dental equipment, enhancing compliance and reducing downtime for healthcare providers.</p>
                 </div>
                 <!-- Decentralized Voting dApp -->
-                <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition">
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 0.4s;">
                     <h3 class="text-2xl font-semibold mb-4">Decentralized Voting dApp</h3>
-                    <p class="text-gray-600 mb-4">A tamper-proof voting application on the Ethereum blockchain for transparent elections.</p>
-
+                    <p class="text-gray-600">A tamper-proof voting application on the Ethereum blockchain for transparent elections.</p>
                 </div>
-              <!-- MedNote AI -->
-                <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition">
+                <!-- MedNote AI -->
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 0.6s;">
                     <h3 class="text-2xl font-semibold mb-4">MedNote AI</h3>
-                    <p class="text-gray-600 mb-4">A web-based tool that helps doctors and clinic staff generate structured patient summaries from free-text medical notes using AI.</p>
-           
+                    <p class="text-gray-600">A web-based tool that helps doctors and clinic staff generate structured patient summaries from free-text medical notes using AI.</p>
                 </div>
-              
-                
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="py-20 bg-gray-800 text-white">
+    <section id="contact" class="py-24 bg-gray-800 text-white">
         <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl font-bold mb-10">Get in Touch</h2>
-            <p class="text-lg mb-8 max-w-2xl mx-auto">Interested in discussing a project or learning more about my work? Drop me an email, and let's connect!</p>
-            <div class="flex justify-center gap-4">
-                <a href="mailto:harrisdanny30@gmail.com" class="bg-blue-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-700 transition shadow-lg">Email Me</a>
-                <a href="https://www.linkedin.com/in/danny-harris-222578374/" class="border-2 border-blue-600 text-blue-600 bg-transparent px-6 py-3 rounded-full font-semibold hover:bg-blue-600 hover:text-white transition">LinkedIn</a>
+            <h2 class="text-4xl font-bold mb-12 animate-fadeInUp">Get in Touch</h2>
+            <p class="text-lg mb-8 max-w-2xl mx-auto animate-fadeInUp" style="animation-delay: 0.2s;">Interested in discussing a project or learning more about my work? Drop me an email, and let's connect!</p>
+            <div class="flex justify-center gap-4 animate-fadeInUp" style="animation-delay: 0.4s;">
+                <a href="mailto:harrisdanny30@gmail.com" class="bg-blue-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-700 transition shadow-lg" aria-label="Email Danny Harris">Email Me</a>
+                <a href="https://www.linkedin.com/in/danny-harris-222578374/" class="border-2 border-blue-600 text-blue-600 bg-transparent px-6 py-3 rounded-full font-semibold hover:bg-blue-600 hover:text-white transition" aria-label="Danny Harris LinkedIn Profile">LinkedIn</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-8">
-        <div class="container mx-auto px-4 text-center">
-            <p>&copy; 2025 Danny Harris. All rights reserved.</p>
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-xl font-bold">Danny Harris</h3>
+                    <p class="text-gray-400">Full Stack Software Engineer</p>
+                </div>
+                <div class="flex gap-6">
+                    <a href="mailto:harrisdanny30@gmail.com" class="text-gray-400 hover:text-blue-400 transition" aria-label="Email Danny Harris">Email</a>
+                    <a href="https://www.linkedin.com/in/danny-harris-222578374/" class="text-gray-400 hover:text-blue-400 transition" aria-label="Danny Harris LinkedIn Profile">LinkedIn</a>
+                </div>
+            </div>
+            <hr class="my-6 border-gray-700">
+            <p class="text-center text-gray-400">&copy; 2025 Danny Harris. All rights reserved.</p>
         </div>
     </footer>
 
@@ -96,6 +170,17 @@
                 });
             });
         });
+
+        // Add animation trigger on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fadeInUp');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.animate-fadeInUp').forEach(el => observer.observe(el));
     </script>
 </body>
 </html>
