@@ -6,6 +6,7 @@
     <title>Danny Harris - Full Stack Software Engineer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
         /* Custom animations */
         @keyframes fadeInUp {
@@ -18,6 +19,10 @@
         /* Smooth scroll behavior */
         html {
             scroll-behavior: smooth;
+        }
+        /* Gradient card background */
+        .skill-card {
+            background: linear-gradient(145deg, #ffffff, #e6e6e6);
         }
     </style>
 </head>
@@ -54,7 +59,7 @@
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold text-center mb-12 animate-fadeInUp">About Me</h2>
             <div class="max-w-3xl mx-auto text-center">
-                <p class="text-lg mb-6 animate-fadeInUp" style="animation-delay: 0.2s;">I'm a dedicated full stack software engineer with over 8 years of experience building innovative, scalable web applications. My expertise spans front-end and back-end development, with a focus on delivering seamless user experiences, AI integration and robust, high-performance systems.</p>
+                <p class="text-lg mb-6 animate-fadeInUp" style="animation-delay: 0.2s;">I'm a dedicated full stack software engineer with over 7 years of experience building innovative, scalable web applications. My expertise spans front-end and back-end development, with a focus on delivering seamless user experiences and robust, high-performance systems.</p>
                 <p class="text-lg animate-fadeInUp" style="animation-delay: 0.4s;">From real-time collaboration tools to decentralized applications on the blockchain, I thrive on solving complex challenges and driving projects from concept to deployment in Agile environments.</p>
             </div>
         </div>
@@ -64,38 +69,84 @@
     <section id="skills" class="py-24 bg-gray-100">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold text-center mb-12 animate-fadeInUp">Skills</h2>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
-                <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 0.2s;">
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+                <!-- Languages -->
+                <div class="skill-card p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 0.2s;">
+                    <i class="fab fa-js-square text-4xl text-yellow-500 mb-4"></i>
                     <h3 class="text-xl font-semibold text-blue-600">JavaScript</h3>
                     <p class="text-gray-600">ES6+, TypeScript, Node.js</p>
                 </div>
-                <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 0.3s;">
-                    <h3 class="text-xl font-semibold text-blue-600">React</h3>
-                    <p class="text-gray-600">Hooks, Redux, Next.js</p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 0.4s;">
-                    <h3 class="text-xl font-semibold text-blue-600">Node.js</h3>
-                    <p class="text-gray-600">Express, REST APIs</p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 0.5s;">
-                    <h3 class="text-xl font-semibold text-blue-600">Blockchain</h3>
-                    <p class="text-gray-600">Ethereum, Solidity</p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 0.6s;">
+                <div class="skill-card p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 0.3s;">
+                    <i class="fab fa-python text-4xl text-blue-400 mb-4"></i>
                     <h3 class="text-xl font-semibold text-blue-600">Python</h3>
-                    <p class="text-gray-600">Django, Flask</p>
+                    <p class="text-gray-600">Scripting, Data Analysis</p>
                 </div>
-                <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 0.7s;">
+                <div class="skill-card p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 0.4s;">
+                    <i class="fas fa-gem text-4xl text-red-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-blue-600">Ruby</h3>
+                    <p class="text-gray-600">Scripting, Web Development</p>
+                </div>
+                <!-- Frameworks -->
+                <div class="skill-card p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 0.5s;">
+                    <i class="fab fa-node-js text-4xl text-green-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-blue-600">Node.js</h3>
+                    <p class="text-gray-600">Express, REST APIs, GraphQL</p>
+                </div>
+                <div class="skill-card p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 0.6s;">
+                    <i class="fab fa-python text-4xl text-blue-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-blue-600">Django</h3>
+                    <p class="text-gray-600">MVC, ORM, Authentication</p>
+                </div>
+                <div class="skill-card p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 0.7s;">
+                    <i class="fab fa-python text-4xl text-blue-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-blue-600">FastAPI</h3>
+                    <p class="text-gray-600">Async APIs, Validation</p>
+                </div>
+                <div class="skill-card p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 0.8s;">
+                    <i class="fab fa-python text-4xl text-blue-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-blue-600">Flask</h3>
+                    <p class="text-gray-600">Lightweight, Microservices</p>
+                </div>
+                <div class="skill-card p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 0.9s;">
+                    <i class="fas fa-gem text-4xl text-red-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-blue-600">Ruby on Rails</h3>
+                    <p class="text-gray-600">MVC, REST APIs, Active Record</p>
+                </div>
+                <!-- Databases -->
+                <div class="skill-card p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 1.0s;">
+                    <i class="fas fa-database text-4xl text-gray-600 mb-4"></i>
                     <h3 class="text-xl font-semibold text-blue-600">Databases</h3>
-                    <p class="text-gray-600">MongoDB, PostgreSQL</p>
+                    <p class="text-gray-600">MongoDB, PostgreSQL, MySQL</p>
                 </div>
-                <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 0.8s;">
-                    <h3 class="text-xl font-semibold text-blue-600">Cloud</h3>
-                    <p class="text-gray-600">AWS, Docker</p>
+                <!-- Blockchain -->
+                <div class="skill-card p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 1.1s;">
+                    <i class="fab fa-ethereum text-4xl text-purple-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-blue-600">Blockchain</h3>
+                    <p class="text-gray-600">Ethereum, Solidity, Web3.js</p>
                 </div>
-                <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 0.9s;">
-                    <h3 class="text-xl font-semibold text-blue-600">DevOps</h3>
-                    <p class="text-gray-600">CI/CD, Git</p>
+                <!-- Cloud & DevOps -->
+                <div class="skill-card p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 1.2s;">
+                    <i class="fab fa-aws text-4xl text-orange-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-blue-600">Cloud & DevOps</h3>
+                    <p class="text-gray-600">AWS, Docker, Kubernetes, CI/CD</p>
+                </div>
+                <!-- Tailwind CSS -->
+                <div class="skill-card p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 1.3s;">
+                    <i class="fas fa-wind text-4xl text-teal-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-blue-600">Tailwind CSS</h3>
+                    <p class="text-gray-600">Responsive Design, Utility-First</p>
+                </div>
+                <!-- Testing -->
+                <div class="skill-card p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 1.4s;">
+                    <i class="fas fa-vial text-4xl text-pink-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-blue-600">Testing</h3>
+                    <p class="text-gray-600">Jest, Cypress, Mocha</p>
+                </div>
+                <!-- AI Integration -->
+                <div class="skill-card p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeInUp" style="animation-delay: 1.5s;">
+                    <i class="fas fa-brain text-4xl text-red-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-blue-600">AI Integration</h3>
+                    <p class="text-gray-600">OpenAI, LLMs, LangChain</p>
                 </div>
             </div>
         </div>
