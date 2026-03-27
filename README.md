@@ -21,7 +21,7 @@ I'm a Full Stack Software Engineer with **9 years of experience** building scala
 - **LinkedIn:** https://www.linkedin.com/in/danny-harris-222578374/
 
 ## 📫 Let's Connect!
-I'm always open to exciting projects, collaboration, or just a good tech chat. Feel free to reach out!
+I'm open to exciting projects, collaboration, or just a good tech chat. Feel free to reach out!
 
 ---
 
