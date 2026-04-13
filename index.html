@@ -306,22 +306,6 @@ nav{
 .tl-company{color:var(--text-faint);font-size:.82rem;font-weight:500;margin-bottom:9px;display:flex;align-items:center;gap:5px;}
 .tl-desc{color:var(--text-muted);font-size:.85rem;line-height:1.72;}
 
-/* ════════════════════════════════════════
-   COMMUNITY
-════════════════════════════════════════ */
-#community{background:var(--bg-alt);}
-.comm-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
-@media(max-width:800px){.comm-grid{grid-template-columns:repeat(2,1fr);}}
-.comm-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:24px 18px;box-shadow:var(--sh-sm);transition:transform .32s,box-shadow .32s;text-align:center;overflow:hidden;position:relative;}
-.comm-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;}
-.comm-card:hover{transform:translateY(-5px);box-shadow:var(--sh-lg);}
-.c-blue::before{background:linear-gradient(90deg,#3b82f6,#6366f1);}
-.c-purple::before{background:linear-gradient(90deg,#a855f7,#6366f1);}
-.c-green::before{background:linear-gradient(90deg,#22c55e,#10b981);}
-.c-amber::before{background:linear-gradient(90deg,#f59e0b,#f97316);}
-.comm-icon{width:50px;height:50px;border-radius:var(--r-md);display:flex;align-items:center;justify-content:center;font-size:1.35rem;margin:0 auto 13px;}
-.comm-title{font-family:'Sora',sans-serif;font-size:.9rem;font-weight:700;margin-bottom:7px;}
-.comm-desc{font-size:.79rem;color:var(--text-muted);line-height:1.65;}
 
 /* ════════════════════════════════════════
    EDUCATION
@@ -727,23 +711,7 @@ footer{background:#070c18;color:#94a3b8;padding:56px 0 24px;}
   </div>
 </section>
 
-<!-- ══════════════════ COMMUNITY ══════════════════ -->
-<section id="community" class="sp">
-  <div class="container">
-    <div class="sh tc">
-      <span class="lbl">Beyond the Code</span>
-      <h2 class="section-title">Community &amp; Craft</h2>
-      <div class="divider"></div>
-      <p class="section-sub" style="margin-top:14px;">Contributing to the developer ecosystem through open source, knowledge sharing, and mentorship.</p>
-    </div>
-    <div class="comm-grid">
-      <div class="comm-card c-blue rv"><div class="comm-icon" style="background:#eff6ff;"><i class="fab fa-github" style="color:#2563eb;font-size:1.35rem;"></i></div><div class="comm-title">Open Source</div><p class="comm-desc">Contribute regularly to JavaScript and Python projects — building features, fixing issues, and improving docs for tools used by thousands of developers every day.</p></div>
-      <div class="comm-card c-purple rv"><div class="comm-icon" style="background:#fdf4ff;"><i class="fas fa-chalkboard-user" style="color:#9333ea;font-size:1.35rem;"></i></div><div class="comm-title">Mentorship</div><p class="comm-desc">Guiding junior engineers through code reviews, pair programming, and 1:1s — helping them build the confidence to ship production software independently.</p></div>
-      <div class="comm-card c-green rv"><div class="comm-icon" style="background:#ecfdf5;"><i class="fas fa-pen-nib" style="color:#059669;font-size:1.35rem;"></i></div><div class="comm-title">Technical Writing</div><p class="comm-desc">Publishing deep-dive articles on React, cloud architecture, and AI on Dev.to and LinkedIn — making complex ideas accessible to engineers at every level.</p></div>
-      <div class="comm-card c-amber rv"><div class="comm-icon" style="background:#fffbeb;"><i class="fas fa-microphone-lines" style="color:#d97706;font-size:1.35rem;"></i></div><div class="comm-title">Tech Talks</div><p class="comm-desc">Speaking at developer meetups and online events on AI in production, scalable architecture, and modern full stack patterns — sharing real-world lessons.</p></div>
-    </div>
-  </div>
-</section>
+
 
 <!-- ══════════════════ EDUCATION ══════════════════ -->
 <section id="education" class="sp">
